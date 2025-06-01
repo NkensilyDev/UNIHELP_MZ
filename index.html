@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luta contra a Tuberculose</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="relative overflow-x-hidden pb-16">
+     <nav class="bg-black bg-opacity-90 fixed top-0 left-0 w-full z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold text-white">UNIHELP CHONGO</h1>
+
+      <!-- Menu do desktop -->
+      <ul class="hidden md:flex space-x-6 items-center">
+
+        <!-- Dropdown 1 -->
+        <li class="relative group">
+          <button
+            class="text-white hover:text-yellow-400 transition-colors duration-300 font-medium flex items-center gap-1"
+            aria-haspopup="true" aria-expanded="false">
+            O que fazemos?
+            <svg class="w-4 h-4 mt-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div
+            class="absolute top-full left-0 mt-2 bg-white text-black rounded-md shadow-md opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 pointer-events-none min-w-[180px] z-50">
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Educação</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Saúde</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Nutrição</a>
+          </div>
+        </li>
+
+        <!-- Dropdown 2 -->
+        <li class="relative group">
+          <button
+            class="text-white hover:text-yellow-400 transition-colors duration-300 font-medium flex items-center gap-1"
+            aria-haspopup="true" aria-expanded="false">
+            Nossos projectos
+            <svg class="w-4 h-4 mt-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div
+            class="absolute top-full left-0 mt-2 bg-white text-black rounded-md shadow-md opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 pointer-events-none min-w-[180px] z-50">
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Moçambique</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Angola</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Guiné-Bissau</a>
+          </div>
+        </li>
+
+        <!-- Dropdown 3 -->
+        <li class="relative group">
+          <button
+            class="text-white hover:text-yellow-400 transition-colors duration-300 font-medium flex items-center gap-1"
+            aria-haspopup="true" aria-expanded="false">
+            Como ajudar?
+            <svg class="w-4 h-4 mt-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div
+            class="absolute top-full left-0 mt-2 bg-white text-black rounded-md shadow-md opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 pointer-events-none min-w-[180px] z-50">
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Voluntariado</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Parcerias</a>
+            <a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Doações</a>
+          </div>
+        </li>
+
+        <!-- Donativo -->
+        <li>
+          <a href="#"
+            class="relative group inline-block px-4 py-2 rounded-full text-black font-medium bg-yellow-400 overflow-hidden transition-colors duration-300 hover:bg-yellow-500">
+            <span class="absolute inset-0 bg-yellow-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out rounded-full z-0"></span>
+            <span class="relative z-10 group-hover:text-white">Donativo</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="md:hidden text-yellow-400 focus:outline-none" aria-label="Menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90">
+      <ul class="flex flex-col px-6 py-6 space-y-4 text-white">
+
+        <!-- Dropdown 1 mobile -->
+        <li>
+          <button
+            class="w-full flex justify-between items-center px-4 py-2 font-medium hover:text-yellow-400 focus:outline-none"
+            aria-haspopup="true" aria-expanded="false" data-dropdown-toggle="drop1">
+            O que fazemos?
+            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <ul id="drop1" class="hidden flex flex-col mt-2 space-y-1 pl-4 text-black bg-white rounded-md shadow-md">
+            <li><a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Educação</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Saúde</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Nutrição</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown 2 mobile -->
+        <li>
+          <button
+            class="w-full flex justify-between items-center px-4 py-2 font-medium hover:text-yellow-400 focus:outline-none"
+            aria-haspopup="true" aria-expanded="false" data-dropdown-toggle="drop2">
+            Nossos projectos
+            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <ul id="drop2" class="hidden flex flex-col mt-2 space-y-1 pl-4 text-black bg-white rounded-md shadow-md">
+            <li><a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Moçambique</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Angola</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Guiné-Bissau</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown 3 mobile -->
+        <li>
+          <button
+            class="w-full flex justify-between items-center px-4 py-2 font-medium hover:text-yellow-400 focus:outline-none"
+            aria-haspopup="true" aria-expanded="false" data-dropdown-toggle="drop3">
+            Como ajudar?
+            <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <ul id="drop3" class="hidden flex flex-col mt-2 space-y-1 pl-4 text-black bg-white rounded-md shadow-md">
+            <li><a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Voluntariado</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Parcerias</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-yellow-100 whitespace-nowrap">Doações</a></li>
+          </ul>
+        </li>
+
+        <!-- Donativo mobile -->
+        <li>
+          <a href="#"
+            class="inline-block px-4 py-2 rounded-full text-black font-medium bg-yellow-400 transition-colors duration-300 hover:bg-yellow-800">
+            Donativo
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <!-- Vídeo de fundo -->
+    <div class="absolute top-0 left-0 w-full min-h-screen overflow-hidden z-0">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+        class="absolute top-0 left-0 w-full h-full object-cover"
+        onerror="this.style.display='none'; document.getElementById('video-fallback').style.display='block';"
+      >
+        <source src="./TB_VIDEO.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo em segundo plano.
+      </video>
+
+      <div id="video-fallback" class="hidden absolute top-0 left-0 w-full h-full bg-black bg-opacity-70"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-40 pointer-events-none"></div>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <main class="relative z-10 flex flex-col md:flex-row items-center md:justify-center min-h-screen px-6 md:px-20 pt-28 md:pt-32">
+      <section class="w-full md:max-w-2xl lg:max-w-3xl text-left pb-16">
+        <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+          Luta contra a<br />
+          <span class="text-yellow-400">Tuberculose</span><br />
+          em Moçambique
+        </h2>
+
+        <!-- Estatísticas -->
+        <div class="flex flex-col sm:flex-row sm:space-x-10 mb-8 space-y-6 sm:space-y-0">
+          <!-- Pessoas tratadas -->
+          <div class="text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-2 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <title>Pessoas tratadas</title>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 3.13a4 4 0 010 7.75M8 3.13a4 4 0 000 7.75" />
+            </svg>
+            <div class="text-4xl font-bold">120+</div>
+            <div class="text-lg">Pessoas tratadas</div>
+          </div>
+
+          <!-- Clínicas atendidas -->
+          <div class="text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-2 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <title>Clínicas atendidas</title>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            <div class="text-4xl font-bold">3+</div>
+            <div class="text-lg">Clínicas atendidas</div>
+          </div>
+
+          <!-- Casos curados -->
+          <div class="text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-2 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <title>Casos curados</title>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4m1-4a9 9 0 11-18 0a9 9 0 0118 0z" />
+            </svg>
+            <div class="text-4xl font-bold">98%</div>
+            <div class="text-lg">Casos curados</div>
+          </div>
+        </div>
+
+        <!-- Botão de doação -->
+        <button class="relative inline-flex items-center px-8 py-4 bg-yellow-400 text-black text-lg font-bold rounded-full shadow-xl transition-all duration-500 ease-in-out overflow-hidden group hover:bg-yellow-500">
+          <span class="absolute inset-0 w-0 bg-yellow-600 transition-all duration-500 ease-in-out group-hover:w-full"></span>
+          <span class="relative z-10 transition-colors duration-500 ease-in-out group-hover:text-white">Fazer uma Doação</span>
+        </button>
+      </section>
+    </main>
+
+    <!-- Espaço extra no final -->
+    <div class="h-20"></div>
+  </body>
+  <script type="text/js" src="/main.js"></script>
+</html>
